@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /about-us/
+Allow: /capability/
+Allow: /products/
+Allow: /contact/
+Allow: /sitemap.xml
+
+# Disallow access to image directories and temporary files
+Disallow: /images/
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /*.bak$
+
+# Allow access to important files
+Allow: /style.css
+Allow: /404.html
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://mrtex.net/sitemap.xml

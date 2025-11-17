@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - MR Tex. The page you're looking for doesn't exist. Return to our homepage.">
+    <title>404 - Page Not Found | MR Tex</title>
+    <link rel="icon" href="images/MRTex-logo.jpg" type="image/jpeg">
+    <link rel="canonical" href="https://mrtex.net/404.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/MRTex.png" alt="MR Tex Logo">
+                </a>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us/">About Us</a></li>
+                    <li><a href="/capability/">Capability</a></li>
+                    <li><a href="/products/">Products</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-wrapper">
+                <button id="mobile-menu-button" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us/">About Us</a></li>
+                <li><a href="/capability/">Capability</a></li>
+                <li><a href="/products/">Products</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="error-page">
+            <div class="container">
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <p>The page you're looking for doesn't exist or has been moved.</p>
+                <p>Don't worry, you can easily navigate back to our main pages using the links below.</p>
+                
+                <div class="text-center mt-2">
+                    <a href="/" class="btn">Go to Homepage</a>
+                    <a href="/contact/" class="btn btn-secondary">Contact Us</a>
+                </div>
+                
+                <div class="grid grid-2" style="margin-top: 3rem;">
+                    <div>
+                        <h3>Popular Pages</h3>
+                        <ul style="text-align: left; margin-left: 2rem;">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/products/">Products</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Need Help?</h3>
+                        <p>If you can't find what you're looking for, feel free to contact us directly.</p>
+                        <p>Email: <a href="mailto:contact@mrtex.net">contact@mrtex.net</a></p>
+                        <p>WhatsApp: <a href="https://wa.me/+8801712548608">+880 1712 548608</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MR Tex</h3>
+                    <p>Your trusted partner for innovative textile solutions. Backed by extensive experience with top global brands.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/capability/">Capability</a></li>
+                        <li><a href="/products/">Products</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@mrtex.net">contact@mrtex.net</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/+8801712548608">+880 1712 548608</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 MR Tex. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-button');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            if (mobileMenuToggle && mobileNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.mobile-nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
